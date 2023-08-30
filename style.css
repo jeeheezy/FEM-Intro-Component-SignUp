@@ -99,8 +99,9 @@ input[type=submit] {
     letter-spacing: 0.1rem;
 }
 
-input[type=submit]:focus {
-    border-color: var(--dark-blue);
+.textinput:focus {
+    outline: solid 1px var(--dark-blue);
+    caret-color: var(--dark-blue);
 }
 
 .form > p {
@@ -115,7 +116,7 @@ input[type=submit]:focus {
     font-weight: 700;
 }
 
-.fieldemptyerror {
+.error {
     color: var(--red);
     align-self: flex-end;
     margin: 0 0 1rem;
@@ -133,4 +134,8 @@ input[type=submit]:focus {
 
 .changedform::placeholder {
     color: transparent;
+}
+
+.incorrectemail {
+    color: var(--red);
 }
