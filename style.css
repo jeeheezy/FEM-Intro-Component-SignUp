@@ -14,9 +14,10 @@ body {
     justify-content: center;
     background-image: url(./images/bg-intro-mobile.png);
     background-color: var(--red);
+    background-size: cover;
     font-family: 'Poppins', sans-serif;
     text-align: center;
-    margin: 2rem 0;
+    margin: 5rem 0;
     padding: 0 1.5rem;
 }
 
@@ -25,6 +26,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
 }
 .text {
     margin-bottom: 1.5rem;
@@ -99,6 +101,15 @@ input[type=submit] {
     letter-spacing: 0.1rem;
 }
 
+input[type=submit]:hover {
+    cursor: pointer;
+}
+
+input[type=submit]:active {
+    background-color: hsl(154, 76%, 70%);
+    box-shadow: 0 0.25rem var(--green);
+}
+
 .textinput:focus {
     outline: solid 1px var(--dark-blue);
     caret-color: var(--dark-blue);
@@ -139,3 +150,34 @@ input[type=submit] {
 .incorrectemail {
     color: var(--red);
 }
+
+@media(min-width: 60rem) {
+    body {
+        background-image: url(./images/bg-intro-desktop.png);
+        margin: 0;
+        padding: 0 5%;
+    }
+    .general {
+        flex-direction: row;
+        max-width: 70rem;
+    }
+    .text {
+        flex-basis: 50%;
+        text-align: left;
+    }
+    .text > h2 {
+        padding: 0;
+        margin-bottom: 1rem;
+        font-size: 3rem;
+        line-height: 1.25;
+    }
+    .trial-form {
+        flex-basis: 50%;
+    }
+}
+/* 
+@media(min-width: 90rem) {
+    body{
+        padding: 0 15%;
+    }
+} */
