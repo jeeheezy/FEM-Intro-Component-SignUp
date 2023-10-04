@@ -110,6 +110,8 @@ input[type=submit]:active {
     box-shadow: 0 0.25rem var(--green);
 }
 
+/*if this outline and red border on error seem conflicting, can add eventlistener on JS file
+and add in conditions that red error border should not persist while in focus*/
 .textinput:focus {
     outline: solid 1px var(--dark-blue);
     caret-color: var(--dark-blue);
